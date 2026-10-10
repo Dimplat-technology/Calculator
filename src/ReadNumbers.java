@@ -13,7 +13,7 @@ public class ReadNumbers {
         System.out.println("Press S for Subtraction");
         System.out.println("Press D for Division");
         System.out.println("Press M for Multiplication");
-        System.out.println("Press R for Multiplication");
+        System.out.println("Press R for Even or Odd");
 
 
         ReadNumbers readNumbers = new ReadNumbers();
@@ -56,5 +56,18 @@ class GradeCalculator{
 
         };
         System.out.println(grade);
+    }
+
+}class EvenOrOdd{
+    static void main(){
+        System.out.println("Test your numbers");
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        EvenOrOdd eod = new EvenOrOdd();
+        System.out.println(eod.isEvenOrOdd(number));
+    }
+    String isEvenOrOdd(int num){
+        String result = ( num % 2 == 0) ? "The number is Even" : "The number is Odd";
+        return result;
     }
 }
